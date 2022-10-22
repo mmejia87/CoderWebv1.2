@@ -5,29 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/estilo.css">
-    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/normalize.css">
     <title>Tienda M</title>
 </head>
 <body>
     <header class="header">
         <a href="index.html">
-            <img class="logo__header" src="/img/majinboo.png" alt="logo">
+            <img class="logo__header" src="./img/logo2.jpg" alt="logo">
         </a>
     </header>
     <nav class="navegacion">
-        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">TIENDA</a>
-        <a class="navegacion__enlace" href="nosotros.html">NOSOTROS</a>
-        <a class="navegacion__enlace" href="catalogo.html">CATALOGO</a>
-        <a class="navegacion__enlace" href="promociones.html">PROMOCIONES</a>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line x1="4" y1="6" x2="20" y2="6" />
+                <line x1="4" y1="12" x2="20" y2="12" />
+                <line x1="4" y1="18" x2="20" y2="18" />
+              </svg>
+            
+        </label>
+        <ul>
+               <li><a class="navegacion__enlace navegacion__enlace--activo" href="tienda.html">TIENDA</a></li>
+               <li><a class="navegacion__enlace" href="nosotros.html">NOSOTROS</a></li>
+               <li><a class="navegacion__enlace" href="catalogo.html">CATALOGO</a></li>
+               <li><a class="navegacion__enlace" href="promociones.html">CONTACTO</a></li>
+        </ul>
     </nav>
+
     <main class="contenedor">
         <h1>Nuestros Productos</h1>
 
         <div class="grid">
             <div class="producto">
                 <a href="catalogo.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 1</p>
                         <p class="producto__precio">$$$$</p>
@@ -36,7 +49,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 2</p>
                         <p class="producto__precio">$$$$</p>
@@ -45,7 +58,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 3</p>
                         <p class="producto__precio">$$$$</p>
@@ -54,7 +67,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 4</p>
                         <p class="producto__precio">$$$$</p>
@@ -63,7 +76,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 5</p>
                         <p class="producto__precio">$$$$</p>
@@ -72,7 +85,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 6</p>
                         <p class="producto__precio">$$$$</p>
@@ -81,7 +94,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 7</p>
                         <p class="producto__precio">$$$$</p>
@@ -90,7 +103,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 8</p>
                         <p class="producto__precio">$$$$</p>
@@ -99,7 +112,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 9</p>
                         <p class="producto__precio">$$$$</p>
@@ -108,7 +121,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 10</p>
                         <p class="producto__precio">$$$$</p>
@@ -117,7 +130,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 11</p>
                         <p class="producto__precio">$$$$</p>
@@ -126,7 +139,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 12</p>
                         <p class="producto__precio">$$$$</p>
@@ -135,7 +148,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 13</p>
                         <p class="producto__precio">$$$$</p>
@@ -144,7 +157,7 @@
             </div> <!--.producto-->
             <div class="producto">
                 <a href="producto.html">
-                    <img class="producto__imagen" src="img/fondo8.jpg" alt="imagen camisa">
+                    <img class="producto__imagen" src="./img/fondo8.jpg" alt="imagen camisa">
                     <div class="producto__informacion">
                         <p class="producto__nombre">Modelo 14</p>
                         <p class="producto__precio">$$$$</p>
