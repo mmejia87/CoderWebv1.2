@@ -1,16 +1,24 @@
 :root {
-    --fondo: #84a2c2;
-    --relleno: #412dfd;
-    --rellenoOscuro: #15088f;
-    --blanco: #fcfcfc;
-    --negro: #000; 
-    --general: #9c9a9a; 
+    // --fondo: #84a2c2;
+    // --relleno: #412dfd;
+    // --rellenoOscuro: #15088f;
+    // --blanco: #fcfcfc;
+    // --negro: #000; 
+    // --general: #9c9a9a; 
     --generalOscuro: #494b4e; 
     --FuentePrincipal: 'Fuzzy Bubbles', cursive;
     background: rgb(252,252,252);
     background: linear-gradient(0deg, rgba(252,252,252,1) 0%, rgba(65,45,253,1) 100%);
 
 }
+/*VARIABLES*/
+
+$color-fondo: #84a2c2;
+$color-relleno: #412dfd;
+$color-rellenoOsc: #15088f;
+$color-letra1: #fcfcfc;
+$color-letra2: #000;
+$color-recuadro: #9c9a9a;
 
 html {
     box-sizing: border-box;
@@ -23,7 +31,7 @@ html {
 /** Globales **/
 
 body {
-    background-color: var(--fondo );
+    background-color: $color-fondo;
     font-size: 1.6rem;
     line-height: 1.5;
 
@@ -32,7 +40,7 @@ body {
 p {
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--negro);
+    color: $color-letra2;
 }
 
 a {
@@ -50,23 +58,26 @@ img {
 
 }
 h1, h2, h3 {
+    
     text-align: center;
-    color: var(--blanco);
+    color: $color-rellenoOsc;
     font-family: var(--FuentePrincipal);
 
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 30rem;
 }
 
 h2 {
     font-size: 3.2rem;
+    color: $color-letra1;
 
 }
 
 h3 {
     font-size: 2.4rem;
+    color: $color-letra1;
 }
 /** Header **/
 
@@ -75,32 +86,34 @@ h3 {
     display: flex;
     justify-content: center;
     transition: .20;
-    
+   
+    .header__logo {
+        margin: 3rem 0;
+          
+    }
 }
 .header:hover {
     transform: scale(1.05, 1.05);
     
 }
 
-.header__logo {
-    margin: 3rem 0;
-      
-}
+
 
 /** Footer **/ 
 .footer {
-    background-color: var(--relleno);
+    background-color: $color-relleno;
     padding: 1rem;
     margin-top: 2rem;
 
+    .footer__texto {
+        font-family: var(--FuentePrincipal);
+        color: $color-letra1;
+        text-align: center;
+        margin-top: 2.2rem;
+    }
 }
 
-.footer__texto {
-    font-family: var(--FuentePrincipal);
-    color: var(--blanco);
-    text-align: center;
-    margin-top: 2.2rem;
-}
+
 
 
 /** Navegacion **/
@@ -114,17 +127,17 @@ h3 {
 */
 .navegacion__enlace {
     font-family: var(--FuentePrincipal);
-    color: var(--negro);
+    color: $color-letra2;
     font-size: 3rem;
 }
 
 .navegacion__enlace--activo,
 .navegacion__enlace:hover {
-    color: var(--blanco);
+    color: $color-letra1;
 
 } 
 nav{
-    background: var(--relleno);
+    background: $color-relleno;
     height: 80px;
     width: 100%;
 }
@@ -144,24 +157,25 @@ nav ul {
     float: right;
     margin-right: 20px;
 
+    li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+        a {
+            color: $color-letra1;
+            font-size: 18px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-family: var(--FuentePrincipal);
+        
+        }
+    }  
 }
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-}
-nav ul li a {
-    color: #fff;
-    font-size: 18px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-    font-family: var(--FuentePrincipal);
 
-}
 
 li a.active, li a:hover {
-    background: var(--general);
+    // background: $color-recuadro;
     transition: .5s;
 }
 
@@ -199,7 +213,7 @@ li a.active, li a:hover {
         position: fixed;
         width: 100%;
         height: 100hv;
-        background: #2c3e50;
+        background: $color-relleno;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -240,7 +254,7 @@ li a.active, li a:hover {
 /** Productos **/
 
 .producto {
-    background-color: var(--relleno);
+    background-color: $color-relleno;
     padding: 1rem;
     transition: font-size .3s ease;
 }
@@ -248,19 +262,25 @@ li a.active, li a:hover {
 .producto:hover {
     font-size: 2.4rem;
     cursor: pointer;
-    background-color: var(--rellenoOscuro);
+    background-color: $color-rellenoOsc;
+
 }
+
 
 .producto__nombre {
     font-size: 4rem;
-    color: var(--blanco);
 
+    .producto__precio {
+        font-size: 2.8rem;
+        color: $color-letra1;
+        
+    }
+}
+.producto__nombre:hover {
+    color:$color-letra1;
 }
 
-.producto__precio {
-    font-size: 2.8rem;
-    color: var(--blanco);
-}
+
 
 .producto__nombre,
 .producto__precio {
@@ -358,7 +378,7 @@ li a.active, li a:hover {
 /**Contacto**/
 
 .formulario { 
-    background-color: var(--relleno);
+    background-color: $color-relleno;
     width: min( 60rem, 100%); 
     margin: 0 auto;
     padding: 2rem;
@@ -367,7 +387,6 @@ li a.active, li a:hover {
 
 .formulario fieldset {
     border: none;
-
 }
 
 .formulario legend {
@@ -376,7 +395,7 @@ li a.active, li a:hover {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: var(--negro);
+    color: $color-letra2;
 }
 
 @media (min-width: 768px) {
@@ -400,13 +419,14 @@ li a.active, li a:hover {
 }
 
 .campo label {
-    color: var(--blanco);
+    color: $color-letra1;
     font-weight: bold;
     margin-bottom: .5rem;
     display: block;
 }
 .campo textarea {
     height: 20rem;
+    width: 20rem;
 }
 
 .input-text {
@@ -437,7 +457,7 @@ li a.active, li a:hover {
 
 @media (min-width: 768px) {
     .boton {
-        width: auto;
+        width: 20rem;
     }
 }
 /**
@@ -472,6 +492,11 @@ li a.active, li a:hover {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;
+        
+    
+    }
+    .camisa__imagen {
+        border-radius: 50px;
     }
 }
 
@@ -482,12 +507,12 @@ li a.active, li a:hover {
 }
 
 .formulario__campo {
-    border-color: var(--relleno);
+    border-color: $color-relleno;
     border-width: 1rem;
     border-style: solid;
     /* border: 1rem solid var(--general); */
-    background-color: var(--blanco);
-    color: var(--negro);
+    background-color: $color-letra1;
+    color: $color-letra2;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     padding: 1rem;
@@ -495,11 +520,12 @@ li a.active, li a:hover {
 }
 
 .formulario__submit {
-    background-color: var(--relleno);
+    background-color: $color-relleno;
     border: none;
+    border-radius: 3rem;
     font-size: 2rem;
     font-family: var(--FuentePrincipal);
-    color: var(--blanco);
+    color: $color-letra1;
     padding: 2rem;
     /*transition: background-color .3s ease;*/
     transition: font-size .3s ease;
@@ -509,5 +535,5 @@ li a.active, li a:hover {
 .formulario__submit:hover {
     font-size: 2.4rem;
     cursor: pointer;
-    background-color: var(--rellenoOscuro);
+    background-color: $color-rellenoOsc;
 }
